@@ -5,6 +5,7 @@ class GhosttyDiscord < Formula
   license "MIT"
 
   on_macos do
+    depends_on macos: :ventura
     on_arm do
       url "https://github.com/onlyPureYogurt/ghostty-discord/releases/download/v0.1.0/ghostty-discord-0.1.0-macos-arm64.tar.gz"
       sha256 "572ab49fa72104a8ae6b8f97f26ebf8bfcc6f2d8f7141efa058b8aec04b8255e"
@@ -16,7 +17,6 @@ class GhosttyDiscord < Formula
   end
 
   depends_on :macos
-  depends_on macos: :ventura
 
   def install
     bin.install "ghostty-discord"
